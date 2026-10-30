@@ -1,0 +1,8 @@
+project: savantenvs/openthread
+target: trel-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+cmds:
+  - cmd: /mayhem/trel-fuzzer
+    libfuzzer: true
+    timeout: 30

@@ -1,0 +1,9 @@
+project: savantenvs/openthread
+target: srp-server-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/srp-server-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/srp-server-fuzzer
+    libfuzzer: true
+    timeout: 30

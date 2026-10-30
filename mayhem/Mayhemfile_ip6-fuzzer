@@ -1,0 +1,9 @@
+project: savantenvs/openthread
+target: ip6-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/ip6-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/ip6-fuzzer
+    libfuzzer: true
+    timeout: 30

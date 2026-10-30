@@ -1,0 +1,9 @@
+project: savantenvs/openthread
+target: dnssd-server-fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dnssd-server-fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/dnssd-server-fuzzer
+    libfuzzer: true
+    timeout: 30
